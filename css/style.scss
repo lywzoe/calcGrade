@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Baloo 2', cursive;
+}
+body {
+  background-color: #272727;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none; 
+}
+
+header {
+  max-width: 100vw;
+  background-color: #272727;
+  nav {
+      box-shadow: 0 8px 6px -6px black;
+    ul {
+      display: flex;   
+      li {
+        padding: 1rem;
+        a {
+          font-size: 1.15rem;
+          color: #FFF;   
+          transition: all 0.2s ease-in;
+          &:hover {
+            color: #E4C063;
+          }
+        }
+      }
+    }
+  }
+}
+main {
+  section {
+    text-align: center;
+    h1 {
+      font-size: 3rem;
+      color: #FFF;
+    }
+    .buttons {
+      .btn {
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;
+        margin: 1rem 0.5rem;
+        width: 90px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .all-inputs {
+      padding: 1rem;
+      form {
+        .grader {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          input,select {
+            padding: .5rem;
+            margin: .375rem;
+            font-size: 1.05rem;
+            border: .35px solid #888888;
+            border-radius: .5rem;
+          }
+          .class-type, .class-number {
+            width: 240px;
+          }
+          .class-credits {
+            width: 120px;
+          }
+          .trash {
+            color: white;
+            border: none;
+            background-color: #272727;
+            padding: .375rem;
+            cursor: pointer;
+            i {
+              font-size: 1.25rem;
+              pointer-events: none;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    .plus {
+      background-color: #272727;
+      border: none;
+      color: white;
+      margin: 3rem 0;
+      cursor: pointer;
+      i {
+        font-size: 2rem;
+      }
+    }
+    .result{
+      border: 3px solid red;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation-name: border_color;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      h2 {
+        font-size: 1.15rem;
+        color: white;
+        font-weight: 500;
+      }
+      h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  } 
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleNone {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes border_color {
+  0% {
+    border-color: red;
+  }
+  33% {
+    border-color: orange;
+  }
+  66% {
+    border-color: yellow;
+  }
+}
